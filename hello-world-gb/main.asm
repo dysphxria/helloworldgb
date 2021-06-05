@@ -34,8 +34,6 @@ Start:
 
     ld hl, $9800 ; This will print in the top left corner of the screen
     ld de, HelloWorldStr
-    ld hl, $9700 ; 
-    ld de, OtherStr
 .copyString
     ld a, [de]
     ld [hli], a
@@ -73,7 +71,4 @@ FontTilesEnd:
 SECTION  "Hello World string", ROM0
 
 HelloWorldStr:
-    db  "Hello world!", 0
-
-OtherStr:
-    db "By Lindsey :-) <3", 0
+    db  "Hello world! :-)", 0
